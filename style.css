@@ -1,0 +1,1084 @@
+/* PARAMETRES GENERAUX */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --bleu: #5cadd3;
+    --bleuFonce: #468cad;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    background: #f5f5f5;
+    color: #46484d;
+}
+
+body h1,
+h2 {
+    font-family: 'roboto', sans-serif;
+    color: #212121;
+    font-weight: 900;
+}
+
+body a {
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    color: #46484d;
+}
+
+.presentation {
+    margin: auto;
+    text-align: center;
+    padding-top: 1vh;
+    width: 40vw;
+}
+
+.presentation h2 {
+    font-size: 2.8em;
+}
+
+.presentation p {
+    font-weight: 500;
+    line-height: 2em;
+}
+
+/* Sélecteurs pour la séparation entre titre et paragraphe de présentation pour Main et Nos Projets. */
+.separator {
+    width: 155px;
+    height: 20px;
+    position: relative;
+    margin: 10px auto 20px;
+}
+
+.ligne {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 145px;
+    height: 1px;
+    background: #d4d9e0;
+}
+
+.point {
+    position: absolute;
+    left: 70px;
+    background: var(--bleu);
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    border: 4px solid #fff;
+}
+
+/* Sélecteurs pour les sauts de ligne entre paragraphes. */
+.sdl {
+    display: inline-block;
+    margin-bottom: 19px;
+}
+
+.dsdl {
+    display: inline-block;
+    margin-bottom: 38px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    height: 109px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.1px 5px #cdd4e6;
+    z-index: 1;
+}
+
+#logo img {
+    margin: 30px 0 30px 14vw;
+}
+
+/* On cache le menu hamburger pour les formats autres que smartphone. */
+#smartphone {
+    display: none;
+}
+
+#principal ul {
+    margin: 1px 10vw 0 0;
+    list-style-type: none;
+    display: flex;
+}
+
+#principal li {
+    margin-right: 3vw;
+}
+
+#principal a:hover {
+    text-shadow: 0.3px 0.3px 0.1px #212121;
+    border-top: 3px solid var(--bleu);
+    padding-top: 43px;
+}
+
+/* SLIDER */
+#slider {
+    position: relative;
+    background: border-box top url('images/slider/bg1-1920.jpg') no-repeat;
+    margin: 109px 0 8vh 0;
+}
+
+#chevron-gauche {
+    position: absolute;
+    top: 290px;
+    height: 75px;
+    width: 37.5px;
+    border-radius: 0 37.5px 37.5px 0;
+    background: #353535;
+}
+
+#chevron-droit {
+    position: absolute;
+    top: 290px;
+    right: 0px;
+    height: 75px;
+    width: 37.5px;
+    border-radius: 37.5px 0 0 37.5px;;
+    background: #353535;
+}
+
+.fa-chevron-left {
+    position: absolute;
+    top: 28px;
+    left: 9px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.fa-chevron-right {
+    position: absolute;
+    top: 28px;
+    right: 9px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+#titre {
+    padding: 20vh 0vw 25vh 12vw;
+    width: 51vw;
+}
+
+#titre h1 {
+    color: #fff;
+    font-size: 2.8em;
+}
+
+#titre p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.07em;
+}
+
+#blue {
+    color: var(--bleu);
+}
+
+#bouton-bleu {
+    display: block;
+    background: var(--bleu);
+    font-size: 1.3em;
+    height: 51px;
+    width: 145px;
+    text-align: center;
+    padding-top: 12px;
+    border-radius: 3px;
+    box-shadow: 0 4px var(--bleuFonce);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* On crée un effet bouton poussoir lors du clic. */
+#bouton-bleu:active {
+    position: relative;
+    top: 2px;
+    box-shadow: 0 2px var(--bleuFonce); 
+}
+
+/* MAIN */
+#nos-services {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding-bottom: 10vh;
+}
+
+#bas {
+    display: flex;
+}
+
+#ecran-apple {
+    margin: 9vh 0 0 12vw;
+}
+
+#ecran-apple img {
+    width: 580px;
+}
+
+#services {
+    margin: 10vh 9vw -6.5vh 18vw;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-text {
+    display: flex;
+}
+
+.icone {
+    margin-top: 12px;
+    margin-right: -68px;
+}
+
+.texte p {
+    font-weight: 500;
+    line-height: 2.2em;
+}
+
+/* On crée les icônes de Main en utilisant Font Awesome. */
+.icone .fas {
+    position: relative;
+    left: -100px;
+    color: var(--bleu);
+    border: 2px solid #d4d9e0;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 35px;
+    padding-top: 20px;
+}
+
+.fa-chart-line {
+    font-size: 1.7em;
+}
+
+.fa-cubes {
+    font-size: 1.8em;
+}
+
+.fa-chart-pie {
+    font-size: 1.5em;
+}
+
+/* On crée le point des icônes en css. */
+.point-2 {
+    position: absolute;
+    top: 24px;
+    right: -10px;
+    background: var(--bleu);
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    border: 3px solid #fff;
+}
+
+/* NOS PROJETS */
+#nos-projets {
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+#bloc-rectangle {
+    list-style-type: none;
+    display: flex;
+    margin: 8vh auto 9vh auto;
+}
+
+#bloc-rectangle li {
+    position: relative;
+}
+
+/* On crée la flèche bleu qui s'activera lors du hover avec Font Awesome. */
+.fa-caret-down {
+    position: absolute;
+    left: 42px;
+    top: 35px;
+    width: 0;
+    height: 0;
+    border: none;
+    font-size: 1.5em;
+    color: var(--bleuFonce);
+    padding-top: 0;
+}
+
+/* On cache la flèche bleu pour ne pas quelle apparaisse en dehors du hover. */
+.arrow {
+    display: none;
+}
+
+#bloc-rectangle a {
+    display: inline-block;
+    height: 45px;
+    width: 98px;
+    text-align: center;
+    background: #e5e5e5;
+    padding-top: 11px;
+    font-weight: 500;
+}
+
+#first {
+    border-radius: 5px 0 0 5px;
+}
+
+#last {
+    border-radius: 0 5px 5px 0;
+}
+
+#bloc-rectangle a:hover {
+    display: inline-block;
+    text-align: center;
+    height: 41px;
+    width: 98px;
+    color: #fff;
+    background: var(--bleu);
+    box-shadow: 0 4px 1px var(--bleuFonce);
+    padding-top: 11px;
+    font-weight: 500;
+}
+
+/* On fait appraître la flèche bleu lors du hover. */
+#bloc-rectangle a:hover~.arrow {
+    display: block;
+}
+
+#portfolio {
+    margin: 3vh auto 0 auto;
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#portfolio li {
+    display: block;
+    position: relative;
+    margin: 0 1vw 3.9vh 1vw;
+}
+
+#portfolio img {
+    width: 340px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+/* Création du hover du portfolio avec une opacity à 0 et une transition à 0.7s pour une apparition progressive lors du hover. */
+.filtre {
+    position: absolute;
+    top: 147px;
+    left: 0px;
+    height: 80px;
+    width: 340px;
+    padding: 7px 0 0 12px;
+    background: rgba(27, 29, 31, 0.612);
+    opacity: 0;
+    transition-duration: 0.7s;
+}
+
+.filtre h2 {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.filtre p {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+#portfolio a:hover .filtre {
+    opacity: 1;
+}
+
+/* Création de l'icône oeil avec Font Awesome. */
+.circle {
+    position: absolute;
+    top: -20px;
+    left: 288px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: var(--bleu);
+}
+
+.fa-eye {
+    position: absolute;
+    top: 13px;
+    left: 10.5px;
+    font-size: 0.8em;
+    color: #fff;  
+} 
+
+/* CONTACT */
+#contact {
+    margin-top: 7vh;
+    position: relative;
+}
+
+/* On mets une opacity à 0.7 pour que la carte laisse transparaître le filtre de couleur verte situé en dessous.
+   Ce qui permet d'avoir la couleur désirée tout en gardant l'interactivité de la carte. */
+iframe {
+    width: 100%;
+    height: 830px;
+    opacity: 0.7;
+    border: 0;
+}
+
+#filtre {
+    background: #46a9ad;
+    height: 830px;
+    width: 100%;
+}
+
+#formulaire {
+    position: absolute;
+    top: 75px;
+    right: 10vw;
+    width: 22.8vw;
+    background: rgba(245, 245, 245, 0.753);
+    padding: 38px 1.3vw 38px 1.3vw;
+}
+
+#formulaire h2 {
+    font-size: 1.6em;
+    line-height: 10px;
+}
+
+#formulaire p {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+#gras {
+    color: #353535;
+    font-family: 'roboto', sans-serif;
+    font-weight: 900;
+    font-size: 0.95em;
+}
+
+.souligne {
+    border-bottom: 1px solid #b1b6c4;
+}
+
+.champ-saisie {
+    padding: 10px 1vw 10px 0.9vw;
+    border: 1px solid #b7bdca;
+    border-radius: 4px;
+    width: 20vw;
+}
+
+::placeholder {
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+    color: #46484d;
+    font-size: 1.1em;
+}
+
+form textarea {
+    height: 250px;
+    resize: vertical;
+}
+
+#button {
+    background: var(--bleu);
+    color: #fff;
+    box-shadow: 0 3px var(--bleuFonce);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding: 10px 0.8vw 10px 0.8vw;
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* On crée un effet bouton poussoir lors du clic. */
+#button:active {
+    position: relative;
+    top: 2px;
+    box-shadow: 0 1px var(--bleuFonce);
+}
+
+#button:focus {
+    outline: none;
+}
+
+/* FOOTER */
+footer {
+    padding: 1%;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* MENTIONS LEGALES */
+#bis {
+    box-shadow: 0 0.1px 5px #cdd4e6;
+    background: #fff;
+    padding: 1%;
+}
+
+#mentions-legales {
+    text-align: justify;
+    margin: 200px 5vw 70px 5vw;
+}
+
+#mentions-legales h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 100px;
+}
+
+#mentions-legales h3 {
+    margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1780px) {
+
+    /* SLIDER */
+    #titre {
+        padding: 20vh 0 25vh 6vw;
+        width: 50vw;
+    }
+    
+    /* MAIN */
+    #ecran_apple {
+        margin: 9vh 0 0 4vw;
+    }
+
+    #services {
+        margin: 10vh 6vw -6.5vh 15vw;
+    }
+}
+
+@media all and (max-width: 1520px) {
+
+    /* HEADER */
+    header {
+        height: 70px;
+    }
+
+    #logo img {
+        margin: 12px 0 10px 8vw;
+        width: 210px;
+    }
+
+    #principal a:hover {
+        padding-top: 23px;
+    }
+
+    /* SLIDER */
+    #slider {
+        background: border-box top url('images/slider/slider_small.jpg') no-repeat;
+        margin: 70px 0 5vh 0;
+    }
+
+    #chevron-gauche, #chevron-droit {
+        display: none;
+    }
+
+    #titre {
+        padding-top: 7vh;
+        padding-bottom: 9vh;
+        width: 90vw;
+        text-align: center;
+    }
+
+    #bouton-bleu {
+        margin: 0 auto 0 auto;
+    }
+
+    /* MAIN */
+    #ecran-apple {
+        margin: 9vh 0 0 0;
+    }
+
+    #ecran-apple img {
+        width: 450px;
+    }
+
+    #services {
+        margin: 10vh 3vw -6.5vh 14vw;
+    }
+
+    /* NOS PROJETS */
+    #portfolio {
+        width: 85vw;
+    }
+
+    #portfolio li {
+        margin: 0 3vw 9vh 3vw;
+    }
+
+    /* CONTACT */
+    #contact {
+        margin-top: 2vh;
+    }
+
+    iframe {
+        height: 700px;
+    }
+
+    #filtre {
+        height: 700px;
+    }
+
+    #formulaire {
+        top: 62px;
+        right: 6vw;
+        padding: 25px 0 25px 19px;
+        width: 330px;
+    }
+
+    #formulaire h2 {
+        line-height: 4px;
+    }
+
+    .champ-saisie {
+        padding: 7px 0.7vw;
+        width: 290px;
+    }
+
+    form textarea {
+        height: 220px;
+    }
+
+    #button {
+        box-shadow: 0 3px var(--bleuFonce);
+        border-radius: 3px;
+    }
+
+    footer {
+        padding: 1%;
+    }
+}
+
+@media all and (max-width: 1080px) {
+    
+    /* PARAMETRES GENERAUX */
+    .ligne {
+        width: 120px;
+        left: 19px;
+    }
+
+    .point {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        top: 1.5px;
+        left: 72px;
+    }
+    
+    /* HEADER */
+    header {
+        height: 50px;
+    }
+
+    #principal ul {
+        margin: 1px 7vw 0 7vw;
+    }
+
+    #principal li {
+        margin-right: 2vw;
+        font-size: 0.9em;
+    }
+
+    #principal a:hover {
+        border-top: 2.5px solid var(--bleu);
+        padding-top: 14px;
+    }
+
+    #logo img {
+        margin: 12px 0 8px 6vw;
+        width: 150px;
+    }
+
+    /* SLIDER */
+    #slider {
+        margin: 50px 0 4vh 0;
+    }
+
+    #titre {
+        padding-top: 5vh;
+        padding-bottom: 6vh;
+        width: 90vw;
+        text-align: center;
+    }
+
+    #titre h1 {
+        font-size: 1.5em;
+    }
+
+    #titre p {
+        font-size: 0.8em;
+    }
+
+    #bouton-bleu {
+        font-size: 0.8em;
+        height: 35px;
+        width: 100px;
+        padding-top: 9px;
+    }
+
+    /* MAIN */
+    .presentation {
+        width: 60vw;
+    }
+
+    .presentation h2 {
+        font-size: 2.2em;
+    }
+
+    .presentation p {
+        font-size: 0.9em;
+    }
+
+    #ecran-apple {
+        display: none;
+    }
+
+    #services {
+        margin: 10vh 7vw -6.5vh 20vw;
+    }
+
+    .icone {
+        margin-top: 17px;
+        margin-right: -78px;
+    }
+
+    .texte h2 {
+        font-size: 1.2em;
+    }
+
+    .texte p {
+        font-size: 0.9em;
+    }
+
+    .fas {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        padding-top: 15px;
+    }
+
+    .fa-chart-line {
+        font-size: 1.3em;
+    }
+
+    .fa-cubes {
+        font-size: 1.4em;
+        padding-top: 13px;
+    }
+
+    .fa-chart-pie {
+        font-size: 1.1em;
+    }
+
+    .point-2 {
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        top: 16px;
+        right: -8px;
+    }
+
+    /* NOS PROJETS */
+    .fa-caret-down {
+        left: 42px;
+        top: 20px;
+        width: 0;
+        height: 0;
+    }
+
+    /* CONTACT */
+    #contact {
+        margin-top: 0;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 1.2%;
+    }
+}
+
+@media all and (max-width: 580px) {
+    
+    /* HEADER */
+    #logo img {
+        margin-left: 3vw;
+    }
+
+    /* On cache le menu principal apparaissant sur tous les autres formats. */
+    #principal {
+        display: none;
+    }
+
+    /* On fait apparaître le menu hamburger */
+    #smartphone {
+        display: block;
+    }
+
+    #hamburger {
+        position: relative;
+    }
+
+    /* Mise en forme de l'icône hamburger */
+    #hamburger span {
+        display: block;
+        width: 18px;
+        height: 3px;
+        position: relative;
+        top: 0px;
+        right: 15px;
+        background: var(--bleu);
+        border-radius: 1.5px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s;
+    }
+
+    #hamburger span:first-child {
+        transform-origin: 0% 0%;
+    }
+    
+    #hamburger span:nth-child(2n) {
+        opacity: 0;
+    }
+
+    #hamburger span:nth-child(5) {
+        transform-origin: 0% 100%;
+    }
+
+    /* On active la transformation en croix uniquement quand le lien hamburger est actif */
+    #hamburger:target span:first-child {
+        transform: rotate(45deg);
+    }
+
+    #hamburger:target span:nth-child(3) {
+        transform: scale(0, 0);
+    }
+
+    #hamburger:target span:nth-child(5) {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* Mise en forme de la croix qui apparaîtra uniquement quand le lien hamburger sera actif,
+    mais avec une opacité 0 pour pas ne pas cacher celle créée par la transformation de l'icône hamburger.
+    
+    Il y a deux croix, celle qui est issue de la transformation de l'icône hamburger-c'est elle qui sera toujours visible-et celle que l'on crée 
+    ici qui permettra de revenir à l'icône hamburger lorsque l'on cliquera dessus, celle-ci restera toujours invisible et sera situé exactement
+    au dessus de la croix visible.
+    
+    Le retour à l'icône hamburger lors du clic sur la croix se fait par la désactivation du lien hamburger provoqué par l'activation du 
+    lien croix. */
+    #hamburger:target #croix div {
+        width: 18px;
+        height: 3px;
+        position: relative;
+        right: 15px;
+        z-index: 2;
+        border-radius: 1.5px;
+        opacity: 0;
+    }
+
+    #hamburger:target #croix div:first-child {
+        transform-origin: 0% 0%;
+        transform: rotate(45deg);
+        margin-bottom: 9px;
+        margin-top: -15px;
+    }
+
+    #hamburger:target #croix div:nth-child(2) {
+        transform-origin: 0% 100%;
+        transform: rotate(-45deg);
+    }
+
+    /* Mise en place du menu qui apparaîtra lors du clic sur l'icône hamburger. */
+    #menu {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: -18px;
+        margin-left: 18px;
+        padding: 125px 0 0 50px;
+        background: #f5f5f5;
+        list-style-type: none;
+        transition: transform 0.5s;
+    }
+
+    /* Réglage de l'apparition du menu par la droite lors du clic sur l'icône hamburger. */
+    #hamburger:target #menu {
+        transform: translate(-100vw);
+    }
+
+    ul a {
+        text-decoration: none;
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    #menu a:hover {
+        text-shadow: 0.3px 0.3px 0.1px #212121;
+        border-bottom: 3px solid var(--bleu);
+    }
+
+    /* SLIDER */
+    #titre {
+        padding-top: 4vh;
+        padding-bottom: 5vh;
+    }
+
+    #titre p {
+        display: none;
+    }
+
+    /* MAIN */
+    #services {
+        margin: 7vh 8vw -6.5vh 130px;
+    }
+
+    /* NOS PROJETS */
+    #bloc-rectangle {
+        margin: 4vh auto 4vh auto;
+        font-size: 0.75em;
+    }
+
+    #bloc-rectangle a {
+        height: 30px;
+        width: 70px;
+        padding-top: 8px;
+    }
+
+    #first {
+        border-radius: 3px 0 0 3px;
+    }
+
+    #last {
+        border-radius: 0 3px 3px 0;
+    }
+
+    #bloc-rectangle a:hover {
+        height: 27.5px;
+        width: 70px;
+        box-shadow: 0 2px 1px var(--bleuFonce);
+        padding-top: 8px;
+    }
+
+    .fa-caret-down {
+        left: 30px;
+        top: 6px;
+        width: 0;
+        height: 0;
+    }
+
+    #portfolio li {
+        margin: 0 1vw 5vh 1vw;
+    }
+
+    #portfolio img {
+        width: 300px;
+    }
+
+    .filtre {
+        top: 130px;
+        left: 0px;
+        height: 70px;
+        width: 300px;
+    }
+    
+    .filtre h2 {
+        font-size: 1.1em;
+    }
+    
+    .filtre p {
+        font-size: 0.9em;
+    }
+    
+    .circle {
+        top: -17px;
+        left: 252px;
+        width: 35px;
+        height: 35px;
+        border: 2px solid #fff;
+    }
+    
+    .fa-eye {
+        top: 10px;
+        left: 10px;
+        font-size: 0.7em; 
+    } 
+
+    /* CONTACT */
+    #contact {
+        margin-top: 2vh;
+        background: #fff;
+        padding-bottom: 30px;
+    }
+
+    #formulaire {
+        position: static;
+        margin: 30px auto 0 auto;
+        background: #ececec;
+        width: 80vw;
+        padding: 38px 1.3vw 38px 4.8vw;
+    }
+
+    #formulaire h2 {
+        font-size: 1.6em;
+        line-height: 10px;
+    }
+
+    #formulaire p {
+        font-size: 0.9em;
+    }
+
+    .champ-saisie {
+        padding: 10px 1vw 10px 2vw;
+        width: 70vw;
+    }
+
+    ::placeholder {
+        font-size: 1.1em;
+    }
+
+    form textarea {
+        height: 220px;
+    }
+
+    #button {
+        box-shadow: 0 4px var(--bleuFonce);
+        font-size: 1.1em;
+        padding: 10px 2vw 10px 2vw;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 0.85em;
+        padding: 2%;
+    }
+
+    #mentions-legales {
+        margin-top: 150px;
+    }
+}
